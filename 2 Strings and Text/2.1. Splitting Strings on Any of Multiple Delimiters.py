@@ -1,4 +1,4 @@
-# 2.1. Splitting Strings on Any of Multiple Delimiters
+#! 2.1. Splitting Strings on Any of Multiple Delimiters
 
 # Problem
 # You need to split a string into fields, but the delimiters (and spacing around them) aren’t
@@ -17,3 +17,9 @@
 # Метод split() строковых объектов действительно предназначен для очень простых случаев и не
 # не разрешать использовать несколько разделителей или учитывать возможные пробелы вокруг разделителей.
 # В тех случаях, когда вам нужно немного больше гибкости, используйте метод re.split():
+
+import re
+line = 'asdf fjdk; afed, fjek,asdf, foo'
+str = re.split(r'[;,\s]\s*', line)
+print(str)
+
