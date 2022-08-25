@@ -23,3 +23,14 @@
 # метод, который возвращает подкласс стандартного типа кортежа Python. Вы кормите его типом
 # имя и поля, которые у него должны быть, и он возвращает класс, который вы можете создать, передав
 # в значения для полей, которые вы определили, и так далее. Например:
+
+
+from collections import namedtuple
+Subscriber = namedtuple('Subscriber', ['addr', 'joined'])
+sub = Subscriber('jonesy@example.com', '2012-10-19')
+sub
+Subscriber(addr='jonesy@example.com', joined='2012-10-19')
+sub.addr
+#'jonesy@example.com'
+sub.joined
+#'2012-10-19'
